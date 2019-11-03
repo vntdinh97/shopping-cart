@@ -1,0 +1,19 @@
+<section class="container">
+  <div class="promotion">
+    <label for="promo-code">Have A Promo Code?</label>
+    <input type="text" id="promo-code" (change) = "handleChangeCoupon($event)" /> <button type="button" (click)="submitCoupon()"></button>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li>Subtotal <span>{{price | currency}}</span></li>
+      <li>Tax <span>$5.00</span></li>
+      <li *ngIf="coupon==='dinhdeptrai'">Promotion <span>- $200</span></li>
+      <li class="total">Total <span>{{totalPrice | currency}}</span></li>
+    </ul>
+  </div>
+
+  <div class="checkout">
+    <button type="button" (click)="checkOut()">Check Out</button>
+  </div>
+</section>

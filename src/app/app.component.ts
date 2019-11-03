@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shopping-cart';
+
+  totalPrice:number;
+  totalQuantity:number;
+
+  getChanges(changesObject:any) {
+    this.totalPrice = changesObject.totalPrice;
+    this.totalQuantity = changesObject.totalQuantity;
+  }
+
+  ngDoCheck() {
+  }
 }
