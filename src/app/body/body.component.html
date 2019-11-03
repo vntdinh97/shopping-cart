@@ -1,7 +1,7 @@
 <section class="container">
   <ul class="products" *ngFor="let item of items; let i = index" >
     <li class="row" >
-      <app-item [item]="item" (quantityChanged)="getQuantity($event)" (removeHandler)="removeItem($event)"></app-item>
+      <app-item [item]="item"  (quantityChanged)="getQuantity($event)" (removeHandler)="removeItem($event)"></app-item>
     </li>
   </ul>
 </section>
